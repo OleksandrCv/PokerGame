@@ -34,7 +34,8 @@ namespace PokerLibrary
         /// </summary>
         /// <param name="player">Player object</param>
         /// <returns>Number of Highest card</returns>
-        public static int GetHighestRank(Player player) {
+        public static int GetHighestRank(Player player) 
+        {
             var cardCollectiom = player.Cards;
             var rank = (int)cardCollectiom.OrderByDescending(pc => pc.Rank).FirstOrDefault().Rank;
             return rank;

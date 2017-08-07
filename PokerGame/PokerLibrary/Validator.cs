@@ -12,7 +12,8 @@ namespace PokerLibrary
         /// </summary>
         /// <param name="playerHand"></param>
         /// <returns>bool for valid or not</returns>
-        public static bool ValidateFormat(string playerHand) {
+        public static bool ValidateFormat(string playerHand) 
+        {
             const int numberOfGroups = 11;
             var isValid = false;
             var formattedPlayerHand = playerHand.Replace(" ",string.Empty ).ToUpperInvariant();

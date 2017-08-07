@@ -44,7 +44,8 @@ namespace PokerLibrary
                     }
 	            }
 
-                if (result.Count == 0 && Successor != null) {
+                if (result.Count == 0 && Successor != null) 
+                {
                     return Successor.HandleRequest(request);
                 }
 

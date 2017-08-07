@@ -10,7 +10,8 @@ namespace PokerLibrary
         /// </summary>
         /// <param name="pokerCollection">List of strings with players data.(Sally, AC, 10C, 5C, 8S, 2C)</param>
         /// <returns>List of Player objects</returns>
-        public static List<Player> ConvertToEntities(List<string> pokerCollection) {
+        public static List<Player> ConvertToEntities(List<string> pokerCollection) 
+        {
             var playerCollection = new List<Player>();
 
             foreach (var pokerHand in pokerCollection)

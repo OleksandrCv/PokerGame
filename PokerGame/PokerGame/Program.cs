@@ -8,27 +8,34 @@ namespace PokerGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello Poker Stars");
+            Console.WriteLine("Hello Poker Stars!");
 
-            var input1 = "Joe, 3H, 4D, 5H, 6H, 8H";
-            var input2 = "Bob, JC, AD, 5S, 8C, 10D";
-            var input3 = "Sally, AC, 10C, 5C, 8S, 2C";
-            var inputCollection = new List<string>();
-            inputCollection.Add(input1);
-            inputCollection.Add(input2);
-            inputCollection.Add(input3);
+            var players = new List<string>()
+			{
+				"Joe, 3H, 4H, 5S, 6C, 8H",
+				"Bob, JC, 3D, 3S, 8C, 10D",
+                "Sally, AC, 10C, 5C, 2S, 2C"
+			};
+
+            Console.WriteLine("Input:");
+			foreach (var player in players)
+			{
+				Console.WriteLine(player);
+			}
 
             var pokerGame = new Poker();
-            pokerGame.Init(inputCollection);
+            pokerGame.Init(players);
             
             var result = pokerGame.DefineWinner();
 
-            if (result.Count > 0 ) {
+            if (result.Count > 0) 
+            {
                 foreach (var item in result)
                 {
                     Console.WriteLine(item.ToString());
                 }
-            } else {
+            } else 
+            {
                 Console.WriteLine("Sorry, but we have no winning combination. Please enter correct input data.");
             }
  

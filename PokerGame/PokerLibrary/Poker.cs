@@ -11,7 +11,8 @@ namespace PokerLibrary
         /// Initialization  and conversion of players data
         /// </summary>
         /// <param name="players">List of string with player data</param>
-        public void Init(List<string> players) {
+        public void Init(List<string> players) 
+        {
             isValid = false;
             pokerData = null;
 
