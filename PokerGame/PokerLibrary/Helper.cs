@@ -21,12 +21,12 @@ namespace PokerLibrary
         /// Define combination with tree or two identical Ranks
         /// </summary>
         /// <param name="player">Player object</param>
-        /// <param name="repetetiveRank">number of Ranks to match</param>
+        /// <param name="repetitiveRank">number of Ranks to match</param>
         /// <returns></returns>
-        public static bool isCardsOfAKind(Player player, int repetetiveRank)
+        public static bool isCardsOfAKind(Player player, int repetitiveRank)
         {
             var groupedCollection = player.Cards.GroupBy(pc => pc.Rank).Select(obj => new { Rank = obj.Key, Count = obj.Count() });
-            return groupedCollection.Where(el => el.Count == repetetiveRank).Count() > 0 ? true : false;
+            return groupedCollection.Where(el => el.Count == repetitiveRank).Count() > 0 ? true : false;
         }
 
         /// <summary>

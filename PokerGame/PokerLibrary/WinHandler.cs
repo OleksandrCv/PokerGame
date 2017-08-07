@@ -59,6 +59,7 @@ namespace PokerLibrary
     public class ThreeOfAKindHandler : WinHandler
     {
         private const int three = 3;
+
         public override List<string> HandleRequest(List<Player> request)
         {
             var result = new List<string>();
