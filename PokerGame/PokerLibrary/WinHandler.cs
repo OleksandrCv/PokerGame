@@ -19,7 +19,7 @@ namespace PokerLibrary
         }
 
         /// <summary>
-        /// Process request 
+        /// Process request
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
